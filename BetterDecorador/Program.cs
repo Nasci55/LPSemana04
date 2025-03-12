@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.InteropServices;
 
 namespace BetterDecorador
 {
@@ -16,12 +18,18 @@ namespace BetterDecorador
         private static void Main(string[] args)
         {
 
-            char sym = char.Parse(args[1]);
-            int num = int.Parse(args[2]);
 
 
-
-            System.Console.WriteLine(Decor(args[0], sym, num));
+            if (args.Length == 0)
+            {
+                System.Console.WriteLine(Decor());
+            }
+            else
+            {
+                char sym = char.Parse(args[1]);
+                int num = int.Parse(args[2]);
+                Console.WriteLine(Decor(args[0], sym, num));
+            }
         }
 
 
@@ -45,6 +53,17 @@ namespace BetterDecorador
             }
 
             return $"{str} {s} {str}";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private static string Decor()
+        {
+
+            return Decor("User did not specify args!", '=', 3);
+
         }
     }
 }
