@@ -2,6 +2,9 @@
 
 namespace BetterDecorador
 {
+    /// <summary>
+    /// This programs adds decorations behind and after the strings.
+    /// </summary>
     public class Program
     {
         /// <summary>
