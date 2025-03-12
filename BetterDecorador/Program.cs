@@ -56,7 +56,7 @@ namespace BetterDecorador
         }
 
         /// <summary>
-        /// 
+        /// If Decor is empty then would just return this function
         /// </summary>
         /// <returns></returns>
         private static string Decor()
